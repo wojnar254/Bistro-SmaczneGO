@@ -3,8 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bistro SmaczneGO | Opole</title>
-<meta name="description" content="Bistro SmaczneGO — domowe jedzenie w Opolu, ul. Grota-Roweckiego 6.">
+<title>Bistro SmaczneGO | Domowe obiady w Opolu</title>
+<meta name="description" content="Bistro SmaczneGO w Opolu — domowe obiady, świeże składniki i sezonowe menu. Grota-Roweckiego 6, tel. 515 616 912.">
+<meta name="theme-color" content="#304b35">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Bistro SmaczneGO",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ul. Stefana Grota-Roweckiego 6",
+    "postalCode": "45-268",
+    "addressLocality": "Opole",
+    "addressCountry": "PL"
+  },
+  "telephone": "+48 515 616 912",
+  "priceRange": "20–40 zł",
+  "servesCuisine": ["Polska", "Domowa"],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "12:00",
+      "closes": "17:00"
+    }
+  ],
+  "sameAs": ["https://www.facebook.com/1516055031989770/"]
+}
+</script>
+
 <style>
 :root{--cream:#fffaf1;--dark:#1e211c;--green:#304b35;--accent:#d98b45;--muted:#6f726b;--white:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--cream);color:var(--dark)}
@@ -13,60 +42,61 @@ nav{position:fixed;top:0;width:100%;z-index:10;background:rgba(255,250,241,.94);
 .logo{font-weight:900;font-size:23px;color:var(--green)}.logo span{color:var(--accent)}
 nav a{color:var(--dark);text-decoration:none;margin-left:25px;font-weight:700;font-size:14px}
 .btn{display:inline-block;background:var(--green);color:#fff!important;padding:13px 20px;border-radius:999px;text-decoration:none;border:0;font-weight:800;cursor:pointer}
+.btn.alt{background:var(--accent)}
+.mobile-call{display:none;margin-left:auto}
 .hero{min-height:720px;padding:150px 22px 80px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(25,32,25,.78),rgba(25,32,25,.28)),url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1800&q=85') center/cover}
 .hero-inner{max-width:1120px;width:100%;margin:auto;color:white}.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:900;color:#ffd09c}
-h1{font-size:clamp(48px,8vw,82px);line-height:.95;max-width:760px;margin:18px 0}.hero p{font-size:20px;max-width:600px;line-height:1.6;color:#f3f0e9}
+h1{font-size:clamp(48px,8vw,82px);line-height:.95;max-width:760px;margin:18px 0}.hero p{font-size:20px;max-width:640px;line-height:1.6;color:#f3f0e9}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 section{padding:90px 22px}.wrap{max-width:1120px;margin:auto}.section-tag{text-transform:uppercase;letter-spacing:2px;color:var(--accent);font-size:12px;font-weight:900}
-h2{font-size:clamp(34px,5vw,52px);margin:10px 0 18px}.intro{color:var(--muted);font-size:18px;line-height:1.7;max-width:720px}
+h2{font-size:clamp(34px,5vw,52px);margin:10px 0 18px}.intro{color:var(--muted);font-size:18px;line-height:1.7;max-width:760px}
 .about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.about-img{width:100%;height:480px;object-fit:cover;border-radius:28px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}.card{background:white;border:1px solid #eee6d8;border-radius:22px;padding:28px;box-shadow:0 10px 30px rgba(40,35,25,.05)}
 .card h3{margin:0 0 10px;font-size:20px}.card p{color:var(--muted);line-height:1.6;margin:0}
-.menu{background:#304b35;color:#fff}.menu .intro{color:#dbe2d9}.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}.dish{padding:24px 0;border-bottom:1px solid rgba(255,255,255,.18)}.dish-top{display:flex;justify-content:space-between;gap:20px}.dish h3{margin:0;font-size:19px}.price{font-weight:900;color:#ffd09c;white-space:nowrap}.dish p{color:#d6ddd4;margin:8px 0 0;line-height:1.5}
-.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}.review{background:#fff;padding:28px;border-radius:22px}.stars{color:#d98b45;letter-spacing:3px;font-size:18px}.review p{line-height:1.65;color:#555}.review strong{font-size:14px}
-.contact{background:#f0e9dc}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:35px}.contact-box{background:#fff;padding:30px;border-radius:24px}.contact-box p{line-height:1.8;color:#555}.contact-box a{color:var(--green);font-weight:800}
+.menu{background:#304b35;color:#fff}.menu .intro{color:#dbe2d9}.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}.dish{padding:26px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:22px}.dish h3{margin:0 0 10px;font-size:20px}.dish p{color:#d6ddd4;margin:0;line-height:1.6}.menu-cta{margin-top:30px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}.menu-note{color:#d6ddd4;font-size:14px}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}.review{background:#fff;padding:28px;border-radius:22px}.rating{font-size:38px;font-weight:900;color:var(--green);line-height:1}.review p{line-height:1.65;color:#555}.review strong{font-size:14px}.stars{color:#d98b45;letter-spacing:3px;font-size:18px;margin:8px 0}
+.contact{background:#f0e9dc}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:35px}.contact-box{background:#fff;padding:30px;border-radius:24px}.contact-box p{line-height:1.8;color:#555}.contact-box a{color:var(--green);font-weight:800}.contact-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
 footer{background:#1e211c;color:#dfe3dc;padding:35px 22px}.footer{max-width:1120px;margin:auto;display:flex;justify-content:space-between;gap:20px}.small{color:#aeb6aa;font-size:13px}
-@media(max-width:800px){nav .links{display:none}.about,.contact-grid{grid-template-columns:1fr}.about-img{height:320px}.cards,.reviews,.menu-grid{grid-template-columns:1fr}.hero{min-height:650px}.footer{flex-direction:column}}
+@media(max-width:800px){nav .links{display:none}.mobile-call{display:inline-block}.about,.contact-grid{grid-template-columns:1fr}.about-img{height:320px}.cards,.reviews,.menu-grid{grid-template-columns:1fr}.hero{min-height:650px}.footer{flex-direction:column}}
 </style>
 </head>
 <body>
-<nav><div class="nav"><div class="logo">Smaczne<span>GO</span></div><div class="links"><a href="#o-nas">O nas</a><a href="#menu">Menu</a><a href="#opinie">Opinie</a><a href="#kontakt">Kontakt</a><a class="btn" href="tel:+48515616912">Zadzwoń</a></div></div></nav>
+<nav><div class="nav"><div class="logo">Smaczne<span>GO</span></div><div class="links"><a href="#o-nas">O nas</a><a href="#menu">Menu</a><a href="#opinie">Opinie</a><a href="#kontakt">Kontakt</a><a href="https://www.facebook.com/1516055031989770/" target="_blank" rel="noopener">Facebook</a><a class="btn" href="tel:+48515616912">Zadzwoń</a></div><a class="btn mobile-call" href="tel:+48515616912">Zadzwoń</a></div></nav>
 
 <header class="hero">
 <div class="hero-inner">
 <div class="eyebrow">Bistro • Opole</div>
-<h1>Domowy smak.<br>Bez zbędnego czekania.</h1>
-<p>Przytulne bistro przy ul. Grota-Roweckiego 6. Świeże, domowe jedzenie w miejscu, do którego chce się wracać.</p>
-<a class="btn" href="#menu">Zobacz menu</a>
+<h1>Domowe smaki.<br>Świeże i sezonowe.</h1>
+<p>Domowe obiady, świeże składniki i sezonowe dania przy ul. Stefana Grota-Roweckiego 6 w Opolu. Wpadnij na lunch lub obiad.</p>
+<div class="hero-actions"><a class="btn" href="#menu">Zobacz ofertę</a><a class="btn alt" href="https://www.facebook.com/1516055031989770/" target="_blank" rel="noopener">Aktualne menu na Facebooku</a></div>
 </div>
 </header>
 
 <section id="o-nas"><div class="wrap about">
-<div><div class="section-tag">O nas</div><h2>Prosto, świeżo i smacznie.</h2><p class="intro">Bistro SmaczneGO to kameralne miejsce stworzone z myślą o codziennym, dobrym jedzeniu. W ofercie znajdziesz domowe obiady, dania zmieniające się zależnie od dnia oraz opcje na wynos.</p>
-<div class="cards"><div class="card"><h3>Domowa kuchnia</h3><p>Klasyczne smaki i solidne porcje.</p></div><div class="card"><h3>Na miejscu i na wynos</h3><p>Wygodna opcja na szybki obiad.</p></div></div></div>
+<div><div class="section-tag">O nas</div><h2>Przytulne miejsce na codzienny obiad.</h2><p class="intro">Bistro SmaczneGO stawia na domową kuchnię, świeże składniki i sezonowe smaki. Menu jest regularnie zmieniane, dzięki czemu w ofercie pojawiają się różne propozycje na lunch i obiad.</p>
+<div class="cards"><div class="card"><h3>Domowa kuchnia</h3><p>Znane smaki i obiadowe klasyki w codziennym wydaniu.</p></div><div class="card"><h3>Świeże składniki</h3><p>W aktualnych komunikatach bistro podkreśla świeżość i sezonowość dań.</p></div><div class="card"><h3>Zmienne menu</h3><p>Nowe propozycje pojawiają się regularnie, dlatego aktualną kartę najlepiej sprawdzać na Facebooku.</p></div></div></div>
 <img class="about-img" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85" alt="Domowe danie">
 </div></section>
 
 <section id="menu" class="menu"><div class="wrap">
-<div class="section-tag">Menu</div><h2>Co dziś dobrego?</h2><p class="intro">Menu może się zmieniać, dlatego poniżej prezentujemy przykładowy układ oferty. Aktualne dania i ceny warto potwierdzić przed publikacją strony.</p>
+<div class="section-tag">Menu</div><h2>Co dziś dobrego?</h2><p class="intro">Bistro publikuje zmieniające się propozycje obiadowe i sezonowe menu. Zamiast wpisywać na stałe dania, które mogą się zmienić, tutaj pokazujemy sposób działania oferty.</p>
 <div class="menu-grid">
-<div>
-<div class="dish"><div class="dish-top"><h3>Zupa dnia</h3><span class="price">sprawdź na miejscu</span></div><p>Codziennie inna, świeżo przygotowana zupa.</p></div>
-<div class="dish"><div class="dish-top"><h3>Danie dnia</h3><span class="price">sprawdź na miejscu</span></div><p>Domowy obiad zmieniający się zależnie od dnia.</p></div>
-<div class="dish"><div class="dish-top"><h3>Dania główne</h3><span class="price">20–40 zł</span></div><p>Klasyczne dania kuchni polskiej i propozycje sezonowe.</p></div>
+<div class="dish"><h3>Zestaw dnia</h3><p>Zupa i danie główne w codziennie zmieniającej się odsłonie.</p></div>
+<div class="dish"><h3>Menu tygodniowe</h3><p>Dodatkowe dania do wyboru poza bieżącym zestawem dnia.</p></div>
+<div class="dish"><h3>Sezonowe propozycje</h3><p>Dania inspirowane aktualną porą roku i dostępnością świeżych składników.</p></div>
 </div>
-<div>
-<div class="dish"><div class="dish-top"><h3>Opcje wegetariańskie</h3><span class="price">sprawdź na miejscu</span></div><p>Bezmięsne propozycje zależne od aktualnej karty.</p></div>
-<div class="dish"><div class="dish-top"><h3>Kawa i herbata</h3><span class="price">sprawdź na miejscu</span></div><p>Coś ciepłego do obiadu lub deseru.</p></div>
-<div class="dish"><div class="dish-top"><h3>Desery</h3><span class="price">sprawdź na miejscu</span></div><p>Słodkie dodatki do codziennego menu.</p></div>
-</div>
+<div class="menu-cta"><a class="btn alt" href="https://www.facebook.com/1516055031989770/" target="_blank" rel="noopener">Sprawdź aktualne menu</a><span class="menu-note">Orientacyjny poziom cen w dostępnych zestawieniach: ok. 20–40 zł za osobę.</span></div>
+</div></section>
+
+<section id="opinie"><div class="wrap"><div class="section-tag">Opinie i wyróżnienia</div><h2>Goście wysoko oceniają SmaczneGO.</h2><p class="intro">Zamiast przykładowych cytatów pokazujemy aktualne, weryfikowalne dane z publicznych zestawień.</p>
+<div class="reviews">
+<div class="review"><div class="rating">4,9/5</div><div class="stars">★★★★★</div><p>Ocena w Google przy 217 opiniach w aktualnie dostępnych danych.</p><strong>Google</strong></div>
+<div class="review"><div class="rating">9,7/10</div><p>Wynik w zestawieniu Orły Gastronomii przy 276 ocenach.</p><strong>Orły Gastronomii</strong></div>
+<div class="review"><div class="rating">2026</div><p>Bistro widnieje jako laureat plebiscytu Orły Gastronomii także w 2026 roku.</p><strong>Wyróżnienie</strong></div>
 </div></div></section>
 
-<section id="opinie"><div class="wrap"><div class="section-tag">Opinie</div><h2>Goście wysoko nas oceniają.</h2><p class="intro">Bistro SmaczneGO jest wysoko oceniane w lokalnych zestawieniach — około 4,9/5 w dostępnych źródłach.</p>
-<div class="reviews"><div class="review"><div class="stars">★★★★★</div><p>„Smaczne jedzenie, miła obsługa i przyjemna atmosfera.”</p><strong>Opinia klienta</strong></div><div class="review"><div class="stars">★★★★★</div><p>„Dobry wybór na domowy obiad i szybki posiłek.”</p><strong>Opinia klienta</strong></div><div class="review"><div class="stars">★★★★★</div><p>„Przystępne ceny i duże porcje.”</p><strong>Opinia klienta</strong></div></div></div></section>
-
 <section id="kontakt" class="contact"><div class="wrap"><div class="section-tag">Kontakt</div><h2>Wpadnij do nas.</h2>
-<div class="contact-grid"><div class="contact-box"><h3>Adres</h3><p>ul. Stefana Grota-Roweckiego 6<br>45-268 Opole</p><a href="https://www.google.com/maps/search/?api=1&query=Grota-Roweckiego+6+Opole" target="_blank">Otwórz mapę →</a></div>
-<div class="contact-box"><h3>Telefon</h3><p>515 616 912</p><a href="tel:+48515616912">Zadzwoń →</a><h3 style="margin-top:25px">Godziny</h3><p>Poniedziałek–piątek: 12:00–17:00<br><span class="small">Godziny mogą ulec zmianie.</span></p></div></div></div></section>
+<div class="contact-grid"><div class="contact-box"><h3>Adres</h3><p>ul. Stefana Grota-Roweckiego 6<br>45-268 Opole</p><div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=Grota-Roweckiego+6+Opole" target="_blank" rel="noopener">Otwórz mapę →</a><a href="https://www.facebook.com/1516055031989770/" target="_blank" rel="noopener">Facebook →</a></div></div>
+<div class="contact-box"><h3>Telefon</h3><p>515 616 912</p><a href="tel:+48515616912">Zadzwoń →</a><h3 style="margin-top:25px">Godziny otwarcia</h3><p>Poniedziałek–piątek: 12:00–17:00<br>Sobota–niedziela: zamknięte<br><span class="small">W święta i dni specjalne godziny mogą ulec zmianie.</span></p></div></div></div></section>
 
 <footer><div class="footer"><div><strong>Bistro SmaczneGO</strong><div class="small">Domowe smaki w Opolu.</div></div><div class="small">© 2026 Bistro SmaczneGO</div></div></footer>
 </body>

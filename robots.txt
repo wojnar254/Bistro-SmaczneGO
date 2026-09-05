@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wojnar254.github.io/moja-strona/sitemap.xml

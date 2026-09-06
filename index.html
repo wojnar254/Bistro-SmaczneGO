@@ -486,6 +486,201 @@ h2{
   background:var(--green);
 }
 
+
+/* ===== MENU TYGODNIA ===== */
+.week-tabs{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:34px;
+}
+
+.week-tab{
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.07);
+  color:#fff;
+  padding:12px 16px;
+  border-radius:999px;
+  font-weight:900;
+  cursor:pointer;
+  transition:transform .2s ease,background .2s ease,color .2s ease;
+}
+
+.week-tab:hover{
+  transform:translateY(-2px);
+  background:rgba(255,255,255,.12);
+}
+
+.week-tab.active{
+  background:#fff;
+  color:var(--green);
+}
+
+.today-banner{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin:22px 0 14px;
+  padding:10px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.16);
+}
+
+.today-label{
+  color:#ffd09c;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1.8px;
+}
+
+.daily-menu-card{
+  margin-top:8px;
+  padding:28px;
+  border-radius:24px;
+  background:#fff;
+  color:var(--dark);
+  box-shadow:0 14px 35px rgba(0,0,0,.14);
+}
+
+.daily-menu-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:18px;
+}
+
+.daily-menu-top h3{
+  margin:6px 0 0;
+  font-size:30px;
+}
+
+.daily-price,
+.weekly-price{
+  flex:0 0 auto;
+  background:var(--green);
+  color:#fff;
+  padding:10px 14px;
+  border-radius:14px;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+.daily-course{
+  padding:18px 0;
+  border-top:1px solid #eee6d8;
+}
+
+.daily-course span{
+  display:block;
+  color:var(--accent);
+  text-transform:uppercase;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1.3px;
+  margin-bottom:6px;
+}
+
+.daily-course strong{
+  display:block;
+  font-size:20px;
+  line-height:1.45;
+}
+
+.weekly-extra{
+  margin-top:34px;
+  padding:28px;
+  border-radius:24px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.14);
+}
+
+.weekly-extra-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:22px;
+  flex-wrap:wrap;
+}
+
+.weekly-extra h3{
+  margin:6px 0 0;
+  font-size:28px;
+}
+
+.weekly-menu-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.weekly-item{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:14px;
+  align-items:start;
+  padding:18px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+}
+
+.weekly-number{
+  min-width:34px;
+  height:34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:10px;
+  background:rgba(255,255,255,.12);
+  color:#ffd09c;
+  font-weight:900;
+  padding:0 8px;
+}
+
+.weekly-item h4{
+  margin:1px 0 6px;
+  font-size:18px;
+}
+
+.weekly-item p{
+  margin:0;
+  color:#d6ddd4;
+  line-height:1.5;
+}
+
+.friday-special{
+  grid-column:1/-1;
+}
+
+@media(max-width:800px){
+  .weekly-menu-grid{grid-template-columns:1fr}
+  .friday-special{grid-column:auto}
+  .daily-menu-top{align-items:center}
+}
+
+@media(max-width:520px){
+  .week-tabs{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+
+  .week-tab:last-child{
+    grid-column:1/-1;
+  }
+
+  .weekly-item{
+    grid-template-columns:auto 1fr;
+  }
+
+  .weekly-price{
+    grid-column:2;
+    justify-self:start;
+  }
+}
+
 /* ===== KONTAKT + MAPA ===== */
 .contact{background:#f0e9dc}
 
@@ -823,38 +1018,119 @@ footer{
   </div>
 </section>
 
+
 <section id="menu" class="menu">
   <div class="wrap">
     <div class="section-tag reveal">Menu</div>
-    <h2 class="reveal">Codzienna oferta i zmienne propozycje.</h2>
+    <h2 class="reveal">Menu tygodnia</h2>
 
     <p class="intro reveal">
-      Zamiast zamrażać jedno menu na stałe, warto wykorzystać stronę do pokazania stylu oferty, a aktualne dania kierować na Facebook lub publikować później w łatwej do aktualizacji sekcji.
+      Zestaw dnia zmienia się od poniedziałku do piątku. Wybierz dzień albo zostaw stronę w trybie automatycznym — aktualny dzień tygodnia zostanie zaznaczony sam.
     </p>
 
-    <div class="menu-grid">
-      <div class="dish reveal">
-        <h3>Zestaw dnia</h3>
-        <p>Zupa i danie główne w codziennie zmieniającej się odsłonie — idealne dla osób szukających szybkiego, domowego obiadu.</p>
-      </div>
-
-      <div class="dish reveal" style="--delay:90ms">
-        <h3>Klasyki i nowości</h3>
-        <p>Na zdjęciach widać zarówno tradycyjne obiady, jak i makarony, burgery czy bardziej nowoczesne propozycje lunchowe.</p>
-      </div>
-
-      <div class="dish reveal" style="--delay:180ms">
-        <h3>Na miejscu i na wynos</h3>
-        <p>Strona może prowadzić klienta do telefonu, aktualnego menu lub dalszej rozbudowy o zamówienia i ofertę sezonową.</p>
-      </div>
+    <div class="week-tabs reveal" role="tablist" aria-label="Wybierz dzień tygodnia">
+      <button class="week-tab" type="button" data-day="1">Poniedziałek</button>
+      <button class="week-tab" type="button" data-day="2">Wtorek</button>
+      <button class="week-tab" type="button" data-day="3">Środa</button>
+      <button class="week-tab" type="button" data-day="4">Czwartek</button>
+      <button class="week-tab" type="button" data-day="5">Piątek</button>
     </div>
 
-    <div class="menu-cta reveal">
-      <a class="btn alt" href="https://www.facebook.com/1516055031989770/" target="_blank" rel="noopener">Sprawdź aktualne menu</a>
-      <span class="menu-note">Projekt demonstracyjny — treści można później łatwo dopasować do oficjalnej wersji strony.</span>
+    <div class="today-banner reveal">
+      <span class="today-label">DZISIAJ</span>
+      <strong data-today-name>Sprawdzam dzień...</strong>
+    </div>
+
+    <div class="daily-menu-card reveal">
+      <div class="daily-menu-top">
+        <div>
+          <div class="section-tag">Zestaw dnia</div>
+          <h3 data-daily-title>Poniedziałek</h3>
+        </div>
+        <div class="daily-price">35 zł</div>
+      </div>
+
+      <div class="daily-course">
+        <span>Zupa</span>
+        <strong data-daily-soup>Barszcz ukraiński</strong>
+      </div>
+
+      <div class="daily-course">
+        <span>II danie</span>
+        <strong data-daily-main>Kotlet mielony, ziemniaki, mizeria ogórkowo-pomidorowa</strong>
+      </div>
+
+      <a class="btn alt" href="tel:+48515616912">Zadzwoń i zapytaj o dostępność</a>
+    </div>
+
+    <div class="weekly-extra reveal">
+      <div class="weekly-extra-head">
+        <div>
+          <div class="section-tag">Menu tygodniowe</div>
+          <h3>Dodatkowe propozycje</h3>
+        </div>
+        <span class="menu-note">Przykład na podstawie poprzedniego tygodnia</span>
+      </div>
+
+      <div class="weekly-menu-grid">
+        <article class="weekly-item">
+          <div class="weekly-number">1</div>
+          <div>
+            <h4>Risotto warzywne</h4>
+            <p>Grillowany łosoś, oliwa pietruszkowa</p>
+          </div>
+          <div class="weekly-price">40 zł</div>
+        </article>
+
+        <article class="weekly-item">
+          <div class="weekly-number">2</div>
+          <div>
+            <h4>Żeberka wieprzowe BBQ</h4>
+            <p>Ziemniaki, coleslaw</p>
+          </div>
+          <div class="weekly-price">40 zł</div>
+        </article>
+
+        <article class="weekly-item">
+          <div class="weekly-number">3</div>
+          <div>
+            <h4>Filet z kurczaka w płatkach kukurydzianych</h4>
+            <p>Ryż, sałaty z winegretem</p>
+          </div>
+          <div class="weekly-price">36 zł</div>
+        </article>
+
+        <article class="weekly-item">
+          <div class="weekly-number">4</div>
+          <div>
+            <h4>Sałatka Cezar z kurczakiem</h4>
+            <p>Pomidory, sos parmezanowy, grzanki</p>
+          </div>
+          <div class="weekly-price">36 zł</div>
+        </article>
+
+        <article class="weekly-item">
+          <div class="weekly-number">5</div>
+          <div>
+            <h4>Wątróbka drobiowa</h4>
+            <p>Ziemniaki, buraki z cebulą</p>
+          </div>
+          <div class="weekly-price">35 zł</div>
+        </article>
+
+        <article class="weekly-item friday-special">
+          <div class="weekly-number">Piątek</div>
+          <div>
+            <h4>Filet z dorsza w panko</h4>
+            <p>Ziemniaki, surówka z kiszonej kapusty, sos koperkowy</p>
+          </div>
+          <div class="weekly-price">40 zł</div>
+        </article>
+      </div>
     </div>
   </div>
 </section>
+
 
 <section id="dania">
   <div class="wrap">
@@ -1209,6 +1485,95 @@ if (slides.length) {
 
   startSlider();
 }
+
+
+
+/* =========================================================
+   MENU DNIA — przykład z poprzedniego tygodnia
+   Po otrzymaniu nowego menu wystarczy podmienić dane poniżej.
+   ========================================================= */
+
+const dailyMenus = {
+  1: {
+    name: "Poniedziałek",
+    soup: "Barszcz ukraiński",
+    main: "Kotlet mielony, ziemniaki, mizeria ogórkowo-pomidorowa"
+  },
+  2: {
+    name: "Wtorek",
+    soup: "Pomidorowa z makaronem",
+    main: "Gulasz z szynki, ziemniaki, surówka z kiszonej kapusty"
+  },
+  3: {
+    name: "Środa",
+    soup: "Krem z dyni hokkaido",
+    main: "Placki ziemniaczane, gzik z ziołami i czosnkiem"
+  },
+  4: {
+    name: "Czwartek",
+    soup: "Jarzynowa z kalafiorem",
+    main: "Schabowy panierowany, ziemniaki, surówka z białej kapusty"
+  },
+  5: {
+    name: "Piątek",
+    soup: "Rosół z makaronem",
+    main: "Kopytka z cebulą i boczkiem"
+  }
+};
+
+function getWarsawWeekday() {
+  const shortName = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Europe/Warsaw",
+    weekday: "short"
+  }).format(new Date());
+
+  const map = {
+    Mon: 1,
+    Tue: 2,
+    Wed: 3,
+    Thu: 4,
+    Fri: 5,
+    Sat: 6,
+    Sun: 0
+  };
+
+  return map[shortName];
+}
+
+function showDailyMenu(day) {
+  const data = dailyMenus[day];
+  if (!data) return;
+
+  document.querySelector("[data-daily-title]").textContent = data.name;
+  document.querySelector("[data-daily-soup]").textContent = data.soup;
+  document.querySelector("[data-daily-main]").textContent = data.main;
+
+  document.querySelectorAll(".week-tab").forEach(tab => {
+    const active = Number(tab.dataset.day) === day;
+    tab.classList.toggle("active", active);
+    tab.setAttribute("aria-selected", active ? "true" : "false");
+  });
+}
+
+const todayDay = getWarsawWeekday();
+const todayNameEl = document.querySelector("[data-today-name]");
+
+if (todayNameEl) {
+  if (todayDay >= 1 && todayDay <= 5) {
+    todayNameEl.textContent = dailyMenus[todayDay].name;
+    showDailyMenu(todayDay);
+  } else {
+    todayNameEl.textContent = "Weekend — bistro zamknięte";
+    showDailyMenu(1);
+  }
+}
+
+document.querySelectorAll(".week-tab").forEach(tab => {
+  tab.addEventListener("click", () => {
+    showDailyMenu(Number(tab.dataset.day));
+  });
+});
+
 
 
 /* =========================================================
